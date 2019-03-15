@@ -49,6 +49,9 @@
                                         <integer key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="GfE-AT-9IC" kind="show" id="vTz-xj-Tdt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fr-1z-Qtx">
                                 <rect key="frame" x="107" y="529" width="200" height="33"/>
@@ -111,6 +114,7 @@
         <!--View Controller-->
         <scene sceneID="ixn-TN-xfs">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z8K-Mx-o6V" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="GfE-AT-9IC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RxB-ve-MPv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -122,35 +126,146 @@
                                     <navigationItem title="GamePicker" id="WTH-pw-bU8">
                                         <barButtonItem key="leftBarButtonItem" systemItem="reply" id="P9f-QY-V1W">
                                             <color key="tintColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="F6j-mV-Etc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="KKg-Ki-YlR">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Spelnaam" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hjf-kv-ZlS">
-                                <rect key="frame" x="87" y="109" width="240" height="55"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verstoppertje" translatesAutoresizingMaskIntoConstraints="NO" id="Gyn-Ee-3I6">
+                                <rect key="frame" x="74.666666666666686" y="118" width="265" height="163"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="WkR-RV-aMm"/>
+                                    <constraint firstAttribute="height" constant="163" id="m1h-VU-7g9"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Wat is het?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="X7B-Ng-40W">
+                                <rect key="frame" x="75" y="282" width="266" height="27"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="IKk-fY-Kbk"/>
+                                    <constraint firstAttribute="height" constant="27" id="LeL-9c-Ial"/>
+                                    <constraint firstAttribute="width" constant="266" id="bO8-xe-vV2"/>
+                                </constraints>
+                                <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gpe-Oo-syY">
+                                <rect key="frame" x="75" y="311" width="266" height="95"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="5YH-Pt-2Ce"/>
+                                    <constraint firstAttribute="width" constant="266" id="mYY-Ep-aG0"/>
+                                </constraints>
+                                <string key="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</string>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Materialen" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QNd-MI-aq5">
+                                <rect key="frame" x="75" y="395" width="266" height="27"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="34E-o1-BU0"/>
+                                    <constraint firstAttribute="width" constant="266" id="90Z-Js-Nud"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="266" id="cCg-K0-Xaa"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="27" id="h3v-X7-HkT"/>
+                                </constraints>
+                                <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="- Grote open vlakte                                      - Verstopplekken" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8hI-aZ-sjT">
+                                <rect key="frame" x="75" y="424" width="266" height="67"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="bX8-ki-tef"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="63" id="kB5-Cg-hWW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="266" id="rmo-ni-psj"/>
+                                    <constraint firstAttribute="height" constant="67" id="vkk-pM-vRu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tijd" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eKd-Bb-006">
+                                <rect key="frame" x="75" y="478" width="266" height="27"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="27" id="Gjb-AL-zsp"/>
+                                    <constraint firstAttribute="width" constant="266" id="QnY-mP-LQr"/>
+                                    <constraint firstAttribute="height" constant="27" id="S1j-mz-BqF"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="27" id="di9-dU-5zH"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="266" id="jqd-Ig-8Ql"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="266" id="zYv-7g-iC9"/>
+                                </constraints>
+                                <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Tf-NI-o59">
+                                <rect key="frame" x="120.66666666666669" y="571" width="173" height="64"/>
+                                <color key="backgroundColor" red="0.50980392159999999" green="0.84313725490000002" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="173" id="FEl-kU-EWD"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="Zyy-8K-Lnb"/>
+                                    <constraint firstAttribute="height" constant="64" id="uwX-lu-WRM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Deel foto"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="30/60 minuten" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZZN-vj-aMW">
+                                <rect key="frame" x="75" y="505" width="266" height="67"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="63" id="42t-eU-WKA"/>
+                                    <constraint firstAttribute="width" constant="266" id="M8U-7j-gmO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="266" id="VDF-Iy-IwZ"/>
+                                    <constraint firstAttribute="height" constant="67" id="aCm-Hu-slI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Spelnaam" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hjf-kv-ZlS">
+                                <rect key="frame" x="88" y="72" width="240" height="46"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="IKk-fY-Kbk"/>
                                     <constraint firstAttribute="width" constant="240" id="yNJ-Lq-cx1"/>
                                 </constraints>
                                 <color key="textColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verstoppertje" translatesAutoresizingMaskIntoConstraints="NO" id="Gyn-Ee-3I6">
-                                <rect key="frame" x="74.666666666666686" y="179" width="265" height="195"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="265" id="WkR-RV-aMm"/>
-                                    <constraint firstAttribute="height" constant="195" id="m1h-VU-7g9"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hjf-kv-ZlS" firstAttribute="centerX" secondItem="RxB-ve-MPv" secondAttribute="centerX" id="4Wk-1Z-hjQ"/>
-                            <constraint firstItem="Gyn-Ee-3I6" firstAttribute="firstBaseline" secondItem="hjf-kv-ZlS" secondAttribute="baseline" constant="15" symbolType="layoutAnchor" id="6bI-ik-kGB"/>
-                            <constraint firstItem="hjf-kv-ZlS" firstAttribute="top" secondItem="mIs-ka-BOZ" secondAttribute="bottom" constant="45" id="C8v-1c-bGH"/>
+                            <constraint firstItem="gpe-Oo-syY" firstAttribute="top" secondItem="X7B-Ng-40W" secondAttribute="bottom" constant="2" id="1TW-pV-KIp"/>
+                            <constraint firstItem="eKd-Bb-006" firstAttribute="top" secondItem="8hI-aZ-sjT" secondAttribute="bottom" constant="-13" id="2Yz-OD-qBX"/>
+                            <constraint firstItem="hjf-kv-ZlS" firstAttribute="centerX" secondItem="RxB-ve-MPv" secondAttribute="centerX" constant="1" id="4Wk-1Z-hjQ"/>
+                            <constraint firstItem="Gyn-Ee-3I6" firstAttribute="firstBaseline" secondItem="hjf-kv-ZlS" secondAttribute="baseline" id="6bI-ik-kGB"/>
+                            <constraint firstItem="X7B-Ng-40W" firstAttribute="top" secondItem="Gyn-Ee-3I6" secondAttribute="bottom" constant="1" id="AZE-fo-Hmc"/>
+                            <constraint firstItem="hjf-kv-ZlS" firstAttribute="top" secondItem="mIs-ka-BOZ" secondAttribute="bottom" constant="8" id="C8v-1c-bGH"/>
+                            <constraint firstItem="gpe-Oo-syY" firstAttribute="centerX" secondItem="RxB-ve-MPv" secondAttribute="centerX" constant="1" id="F1Q-5M-KNK"/>
+                            <constraint firstItem="ZZN-vj-aMW" firstAttribute="centerX" secondItem="RxB-ve-MPv" secondAttribute="centerX" constant="1" id="LTB-br-R9W"/>
+                            <constraint firstItem="9Tf-NI-o59" firstAttribute="top" secondItem="Gyn-Ee-3I6" secondAttribute="bottom" constant="290" id="Qgv-IO-Qdn"/>
+                            <constraint firstItem="8hI-aZ-sjT" firstAttribute="top" secondItem="QNd-MI-aq5" secondAttribute="bottom" constant="2" id="S4Q-S9-NEC"/>
+                            <constraint firstItem="X7B-Ng-40W" firstAttribute="centerX" secondItem="RxB-ve-MPv" secondAttribute="centerX" constant="1" id="ZZe-2N-SkJ"/>
                             <constraint firstItem="Gyn-Ee-3I6" firstAttribute="centerX" secondItem="RxB-ve-MPv" secondAttribute="centerX" id="bd4-e7-bYv"/>
+                            <constraint firstItem="QNd-MI-aq5" firstAttribute="top" secondItem="gpe-Oo-syY" secondAttribute="bottom" constant="-11" id="ehJ-XL-zFh"/>
+                            <constraint firstItem="ZZN-vj-aMW" firstAttribute="top" secondItem="eKd-Bb-006" secondAttribute="bottom" id="j9o-v9-jeI"/>
+                            <constraint firstItem="9Tf-NI-o59" firstAttribute="centerX" secondItem="RxB-ve-MPv" secondAttribute="centerX" id="jtO-Nd-LDO"/>
+                            <constraint firstItem="8hI-aZ-sjT" firstAttribute="centerX" secondItem="RxB-ve-MPv" secondAttribute="centerX" constant="1" id="lov-jb-RTF"/>
+                            <constraint firstItem="eKd-Bb-006" firstAttribute="centerX" secondItem="RxB-ve-MPv" secondAttribute="centerX" constant="1" id="mZZ-BO-Juw"/>
+                            <constraint firstItem="QNd-MI-aq5" firstAttribute="centerX" secondItem="RxB-ve-MPv" secondAttribute="centerX" constant="1" id="o9L-9M-tfn"/>
                             <constraint firstItem="mIs-ka-BOZ" firstAttribute="leading" secondItem="RxB-ve-MPv" secondAttribute="leading" id="svz-rR-mtP"/>
                             <constraint firstAttribute="trailing" secondItem="mIs-ka-BOZ" secondAttribute="trailing" id="tkq-kN-r6y"/>
                             <constraint firstItem="mIs-ka-BOZ" firstAttribute="top" secondItem="C6J-I3-B5y" secondAttribute="top" id="vvU-kC-Nax"/>
@@ -158,14 +273,13 @@
                         <viewLayoutGuide key="safeArea" id="C6J-I3-B5y"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z8K-Mx-o6V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1457.9710144927537" y="23.64130434782609"/>
+            <point key="canvasLocation" x="921.73913043478262" y="133.69565217391306"/>
         </scene>
     </scenes>
     <resources>
         <image name="Spel_beginscherm" width="960" height="720"/>
         <image name="verstoppertje" width="265" height="170"/>
     </resources>
-    <color key="tintColor" name="textColor" catalog="System" colorSpace="catalog"/>
+    <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
 </document>
