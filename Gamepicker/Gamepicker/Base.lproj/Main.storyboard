@@ -114,7 +114,6 @@
         <!--View Controller-->
         <scene sceneID="ixn-TN-xfs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z8K-Mx-o6V" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="GfE-AT-9IC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RxB-ve-MPv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -209,7 +208,7 @@
                                 <rect key="frame" x="120.66666666666669" y="571" width="173" height="64"/>
                                 <color key="backgroundColor" red="0.50980392159999999" green="0.84313725490000002" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="173" id="FEl-kU-EWD"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="173" id="FEl-kU-EWD"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="Zyy-8K-Lnb"/>
                                     <constraint firstAttribute="height" constant="64" id="uwX-lu-WRM"/>
                                 </constraints>
@@ -273,6 +272,7 @@
                         <viewLayoutGuide key="safeArea" id="C6J-I3-B5y"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z8K-Mx-o6V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="921.73913043478262" y="133.69565217391306"/>
         </scene>
