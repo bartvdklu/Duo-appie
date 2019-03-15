@@ -22,18 +22,24 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="GamePicker" id="dF3-KW-zrO">
-                                        <barButtonItem key="rightBarButtonItem" title="Item" id="9gc-LE-FuR"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="9gc-LE-FuR">
+                                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eGa-xs-Bz7">
-                                <rect key="frame" x="0.0" y="64" width="414" height="279"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Spel_beginscherm" translatesAutoresizingMaskIntoConstraints="NO" id="eGa-xs-Bz7">
+                                <rect key="frame" x="0.0" y="64" width="414" height="316"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-rS-SS0">
+                                <rect key="frame" x="0.0" y="64" width="414" height="316"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZc-Xc-nnf">
-                                <rect key="frame" x="84" y="386" width="246" height="64"/>
+                                <rect key="frame" x="84" y="454" width="246" height="64"/>
                                 <color key="backgroundColor" red="0.50980392156862742" green="0.84313725490196079" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="lrW-nI-LJi"/>
+                                    <constraint firstAttribute="height" constant="64" id="MvT-gJ-x75"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -47,19 +53,56 @@
                                     <segue destination="GfE-AT-9IC" kind="show" id="vTz-xj-Tdt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fr-1z-Qtx">
+                                <rect key="frame" x="107" y="529" width="200" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="QUi-ec-rCP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                <state key="normal" title="Zoeken met filter">
+                                    <color key="titleColor" red="0.50980392159999999" green="0.84313725490000002" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uitleg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5e-rE-x3l">
+                                <rect key="frame" x="172" y="136" width="70" height="29"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
+                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Met een druk op de knop krijgt u een spelvoorstel. Uitgebreider zoeken (bv. Buiten of binnen) kan met het filter." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfj-GI-yfQ">
+                                <rect key="frame" x="50" y="196" width="314" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="87" id="2Ff-vE-feH"/>
+                                </constraints>
+                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="QZc-Xc-nnf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="84" id="AyZ-FJ-dIs"/>
-                            <constraint firstItem="71h-uC-tK1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="G5B-DL-dIv"/>
-                            <constraint firstItem="QZc-Xc-nnf" firstAttribute="top" secondItem="eGa-xs-Bz7" secondAttribute="bottom" constant="43" id="JrU-w8-pD6"/>
-                            <constraint firstItem="eGa-xs-Bz7" firstAttribute="top" secondItem="71h-uC-tK1" secondAttribute="bottom" id="Meu-WU-SWD"/>
-                            <constraint firstItem="eGa-xs-Bz7" firstAttribute="centerX" secondItem="QZc-Xc-nnf" secondAttribute="centerX" id="R5l-Ea-sGC"/>
-                            <constraint firstItem="71h-uC-tK1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WsJ-vP-9ux"/>
-                            <constraint firstAttribute="trailing" secondItem="71h-uC-tK1" secondAttribute="trailing" id="XuB-be-QHR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QZc-Xc-nnf" secondAttribute="bottom" constant="286" id="YwT-TT-CTl"/>
-                            <constraint firstItem="71h-uC-tK1" firstAttribute="trailing" secondItem="eGa-xs-Bz7" secondAttribute="trailing" id="q32-j8-PsF"/>
-                            <constraint firstItem="71h-uC-tK1" firstAttribute="leading" secondItem="eGa-xs-Bz7" secondAttribute="leading" id="swY-wb-sVo"/>
+                            <constraint firstItem="71h-uC-tK1" firstAttribute="trailing" secondItem="vS5-rS-SS0" secondAttribute="trailing" id="03p-aj-nqV"/>
+                            <constraint firstItem="vS5-rS-SS0" firstAttribute="top" secondItem="71h-uC-tK1" secondAttribute="bottom" id="8Gl-5D-qUe"/>
+                            <constraint firstItem="eGa-xs-Bz7" firstAttribute="trailing" secondItem="vS5-rS-SS0" secondAttribute="trailing" id="ABB-9M-6CT"/>
+                            <constraint firstItem="vS5-rS-SS0" firstAttribute="bottom" secondItem="eGa-xs-Bz7" secondAttribute="bottom" id="IVO-Px-tiZ"/>
+                            <constraint firstItem="QZc-Xc-nnf" firstAttribute="top" secondItem="eGa-xs-Bz7" secondAttribute="bottom" constant="74" id="IdC-gs-g8s"/>
+                            <constraint firstItem="K5e-rE-x3l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QvX-2H-D84"/>
+                            <constraint firstAttribute="trailing" secondItem="71h-uC-tK1" secondAttribute="trailing" id="WAd-66-cbY"/>
+                            <constraint firstItem="vS5-rS-SS0" firstAttribute="leading" secondItem="eGa-xs-Bz7" secondAttribute="leading" id="WBg-iI-Q10"/>
+                            <constraint firstItem="xfj-GI-yfQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="196" id="Ws5-jH-O1s"/>
+                            <constraint firstItem="xfj-GI-yfQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="YFt-bA-Na6"/>
+                            <constraint firstItem="QZc-Xc-nnf" firstAttribute="centerX" secondItem="5fr-1z-Qtx" secondAttribute="centerX" id="bh0-oW-i8x"/>
+                            <constraint firstItem="vS5-rS-SS0" firstAttribute="centerX" secondItem="QZc-Xc-nnf" secondAttribute="centerX" id="cLB-TO-J1p"/>
+                            <constraint firstItem="71h-uC-tK1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dLf-27-aHM"/>
+                            <constraint firstItem="5fr-1z-Qtx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="g46-gX-0YK"/>
+                            <constraint firstItem="71h-uC-tK1" firstAttribute="leading" secondItem="vS5-rS-SS0" secondAttribute="leading" id="hDM-pm-XxJ"/>
+                            <constraint firstItem="xfj-GI-yfQ" firstAttribute="top" secondItem="K5e-rE-x3l" secondAttribute="bottom" constant="31" id="hLC-ge-yoT"/>
+                            <constraint firstItem="vS5-rS-SS0" firstAttribute="top" secondItem="eGa-xs-Bz7" secondAttribute="top" id="m6o-UT-aI9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5fr-1z-Qtx" secondAttribute="bottom" constant="174" id="muE-MB-6wc"/>
+                            <constraint firstItem="5fr-1z-Qtx" firstAttribute="top" secondItem="QZc-Xc-nnf" secondAttribute="bottom" constant="11" id="nu6-wK-QiV"/>
+                            <constraint firstItem="71h-uC-tK1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="p2L-Rr-1f0"/>
+                            <constraint firstItem="xfj-GI-yfQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qKQ-nQ-eMb"/>
+                            <constraint firstItem="QZc-Xc-nnf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="84" id="zfQ-NV-WzF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -235,6 +278,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Spel_beginscherm" width="960" height="720"/>
         <image name="verstoppertje" width="265" height="170"/>
     </resources>
     <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
