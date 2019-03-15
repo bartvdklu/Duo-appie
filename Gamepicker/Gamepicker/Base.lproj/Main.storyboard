@@ -100,7 +100,7 @@
                                     <constraint firstAttribute="height" constant="163" id="m1h-VU-7g9"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Wat is het?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="X7B-Ng-40W">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Wat is het?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="X7B-Ng-40W">
                                 <rect key="frame" x="75" y="282" width="266" height="27"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -111,7 +111,7 @@
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gpe-Oo-syY">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gpe-Oo-syY">
                                 <rect key="frame" x="75" y="311" width="266" height="95"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -122,7 +122,7 @@
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Materialen" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QNd-MI-aq5">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Materialen" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QNd-MI-aq5">
                                 <rect key="frame" x="75" y="395" width="266" height="27"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -135,7 +135,7 @@
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="- Grote open vlakte                                      - Verstopplekken" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8hI-aZ-sjT">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="- Grote open vlakte                                      - Verstopplekken" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8hI-aZ-sjT">
                                 <rect key="frame" x="75" y="424" width="266" height="67"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -147,7 +147,7 @@
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tijd" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eKd-Bb-006">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tijd" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eKd-Bb-006">
                                 <rect key="frame" x="75" y="478" width="266" height="27"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -179,7 +179,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="30/60 minuten" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZZN-vj-aMW">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="30/60 minuten" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZZN-vj-aMW">
                                 <rect key="frame" x="75" y="505" width="266" height="67"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -191,7 +191,7 @@
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Spelnaam" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hjf-kv-ZlS">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Spelnaam" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hjf-kv-ZlS">
                                 <rect key="frame" x="88" y="72" width="240" height="46"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
