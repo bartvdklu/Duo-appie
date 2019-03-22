@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="133.69565217391306"/>
         </scene>
-        <!--View Controller-->
+        <!--Spel View Controller-->
         <scene sceneID="ixn-TN-xfs">
             <objects>
-                <viewController id="GfE-AT-9IC" sceneMemberID="viewController">
+                <viewController id="GfE-AT-9IC" customClass="SpelViewController" customModule="Gamepicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RxB-ve-MPv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,9 +128,6 @@
                                     <navigationItem title="GamePicker" id="WTH-pw-bU8">
                                         <barButtonItem key="leftBarButtonItem" systemItem="reply" id="P9f-QY-V1W">
                                             <color key="tintColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="F6j-mV-Etc"/>
-                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="KKg-Ki-YlR">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -159,15 +156,14 @@
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gpe-Oo-syY">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpe-Oo-syY">
                                 <rect key="frame" x="75" y="311" width="266" height="95"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="5YH-Pt-2Ce"/>
                                     <constraint firstAttribute="width" constant="266" id="mYY-Ep-aG0"/>
                                 </constraints>
-                                <string key="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</string>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Materialen" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNd-MI-aq5">
@@ -277,15 +273,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C6J-I3-B5y"/>
                     </view>
+                    <connections>
+                        <outlet property="TxtBeschrijving" destination="gpe-Oo-syY" id="6tK-YK-o5n"/>
+                        <outlet property="TxtMaterialen" destination="8hI-aZ-sjT" id="6Fa-jK-3gK"/>
+                        <outlet property="TxtTijd" destination="ZZN-vj-aMW" id="p10-bl-1ik"/>
+                        <outlet property="lblSpel" destination="hjf-kv-ZlS" id="VxN-bc-FtW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8K-Mx-o6V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1709" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Filter View Controller-->
         <scene sceneID="HlG-Q3-tl5">
             <objects>
-                <viewController id="kEP-jH-RCk" customClass="ViewController" customModule="Gamepicker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kEP-jH-RCk" customClass="FilterViewController" customModule="Gamepicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Tq-1n-qs9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -296,9 +298,6 @@
                                     <navigationItem title="GamePicker" id="hdE-gA-x4k">
                                         <barButtonItem key="leftBarButtonItem" systemItem="reply" id="lmU-wa-Cq7">
                                             <color key="tintColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="xSb-tH-UzG"/>
-                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -362,7 +361,7 @@
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="5" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="jr4-zB-Z8w">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="jr4-zB-Z8w">
                                 <rect key="frame" x="59" y="299" width="298" height="30"/>
                                 <color key="tintColor" red="0.57254901960000004" green="0.87058823529999996" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -373,10 +372,10 @@
                                 <color key="thumbTintColor" red="0.57254901960000004" green="0.87058823529999996" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="aantalSlider:" destination="nxl-jX-rNj" eventType="valueChanged" id="zLG-H9-I16"/>
-                                    <action selector="sliderAantal:" destination="kEP-jH-RCk" eventType="valueChanged" id="huq-rj-oIJ"/>
+                                    <action selector="sliderAantal:" destination="kEP-jH-RCk" eventType="valueChanged" id="acy-Sf-hXc"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIG-hD-Ddw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIG-hD-Ddw">
                                 <rect key="frame" x="344" y="325" width="31" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="31" id="CKb-B6-cGU"/>
@@ -436,7 +435,7 @@
                         <viewLayoutGuide key="safeArea" id="FW5-CB-9GK"/>
                     </view>
                     <connections>
-                        <outlet property="lblAantal" destination="OIG-hD-Ddw" id="Adx-o7-cBm"/>
+                        <outlet property="lblAantal" destination="OIG-hD-Ddw" id="fmX-gM-Yw8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mUU-P5-XVy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -451,7 +450,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Ais-Nc-r11"/>
-        <segue reference="xSb-tH-UzG"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
 </document>

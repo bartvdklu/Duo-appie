@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55110A362244D3E4000B1AA3 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55110A352244D3E4000B1AA3 /* GameModel.swift */; };
+		55110A562245072C000B1AA3 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55110A552245072C000B1AA3 /* FilterViewController.swift */; };
+		55110A5822450744000B1AA3 /* SpelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55110A5722450744000B1AA3 /* SpelViewController.swift */; };
 		55547A64223B937100E9A47E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55547A63223B937100E9A47E /* AppDelegate.swift */; };
 		55547A66223B937100E9A47E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55547A65223B937100E9A47E /* ViewController.swift */; };
 		55547A69223B937100E9A47E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55547A67223B937100E9A47E /* Main.storyboard */; };
@@ -19,6 +22,9 @@
 /* Begin PBXFileReference section */
 		20C595857616EE64A69972F9 /* Pods_Gamepicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gamepicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		428949B540445D592302B845 /* Pods-Gamepicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gamepicker.release.xcconfig"; path = "Target Support Files/Pods-Gamepicker/Pods-Gamepicker.release.xcconfig"; sourceTree = "<group>"; };
+		55110A352244D3E4000B1AA3 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		55110A552245072C000B1AA3 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		55110A5722450744000B1AA3 /* SpelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpelViewController.swift; sourceTree = "<group>"; };
 		55547A60223B937100E9A47E /* Gamepicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gamepicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55547A63223B937100E9A47E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55547A65223B937100E9A47E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,9 +81,12 @@
 				55547A63223B937100E9A47E /* AppDelegate.swift */,
 				55547A65223B937100E9A47E /* ViewController.swift */,
 				55547A67223B937100E9A47E /* Main.storyboard */,
+				55110A552245072C000B1AA3 /* FilterViewController.swift */,
+				55110A5722450744000B1AA3 /* SpelViewController.swift */,
 				55547A6A223B937200E9A47E /* Assets.xcassets */,
 				55547A6C223B937200E9A47E /* LaunchScreen.storyboard */,
 				55547A6F223B937200E9A47E /* Info.plist */,
+				55110A352244D3E4000B1AA3 /* GameModel.swift */,
 			);
 			path = Gamepicker;
 			sourceTree = "<group>";
@@ -88,7 +97,6 @@
 				991E0390536B5D772785EED4 /* Pods-Gamepicker.debug.xcconfig */,
 				428949B540445D592302B845 /* Pods-Gamepicker.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -219,6 +227,9 @@
 			files = (
 				55547A66223B937100E9A47E /* ViewController.swift in Sources */,
 				55547A64223B937100E9A47E /* AppDelegate.swift in Sources */,
+				55110A5822450744000B1AA3 /* SpelViewController.swift in Sources */,
+				55110A562245072C000B1AA3 /* FilterViewController.swift in Sources */,
+				55110A362244D3E4000B1AA3 /* GameModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
