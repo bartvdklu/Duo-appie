@@ -136,7 +136,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verstoppertje" translatesAutoresizingMaskIntoConstraints="NO" id="Gyn-Ee-3I6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gyn-Ee-3I6">
                                 <rect key="frame" x="74.666666666666686" y="118" width="265" height="163"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="265" id="WkR-RV-aMm"/>
@@ -451,7 +451,6 @@
     </scenes>
     <resources>
         <image name="Spel_beginscherm" width="960" height="720"/>
-        <image name="verstoppertje" width="530" height="340"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="vTz-xj-Tdt"/>

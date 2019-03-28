@@ -16,7 +16,6 @@ class SpelViewController: UIViewController, UINavigationControllerDelegate, UIIm
     @IBOutlet weak var TxtTijd: UITextView!
     @IBOutlet weak var lblSpel: UITextView!
     @IBOutlet weak var ImageView: UIImageView!
-    @IBOutlet weak var spelImage: UIImageView!
     
     var ref: DatabaseReference?
     var databaseHandle:DatabaseHandle?
@@ -41,16 +40,8 @@ class SpelViewController: UIViewController, UINavigationControllerDelegate, UIIm
         ref = Database.database().reference()
         
         let GameNumber = randomNumber(number: 9)
-        
-//        for imageName in 1...3
-//        {
-//            imagesListArray.append(UIImage(named: "\(imageName).png")!)
-//        }
-        
-        // You can also use below code to add images if not want to use loop
-         imagesListArray.append(UIImage(named: "verstoppertje.png")!)
-         imagesListArray.append(UIImage(named: "Spel_beginscherm.jpg")!)
-//         imagesListArray.append(UIImage(named: "3.png")!)
+        imagesListArray.removeAll()
+        self.imagesListArray.append(UIImage(named: "spel\(GameNumber).jpg")!)
         
         self.ImageView.animationImages = imagesListArray
         self.ImageView.animationDuration = 10
