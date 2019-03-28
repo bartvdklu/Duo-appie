@@ -21,7 +21,9 @@ class SpelViewController: UIViewController, UINavigationControllerDelegate, UIIm
     var databaseHandle:DatabaseHandle?
     
     var previousNumber: Int? // used in randomNumber()
+    var countGames: Int!
     var imagesListArray = [UIImage]()
+    
 
     
     func randomNumber(number: Int) -> Int {
@@ -38,9 +40,17 @@ class SpelViewController: UIViewController, UINavigationControllerDelegate, UIIm
         super.viewDidLoad()
         //set Firebase reference
         ref = Database.database().reference()
-        
+//
+//        databaseHandle = ref?.child("Spellen").observe(.value, with: { (DataSnapshot) in
+//
+//            print(DataSnapshot.childrenCount)
+//            self.countGames = Int(DataSnapshot.childrenCount)
+//            
+//        })
+//        let gamesCount = countGames
+//        print(gamesCount)
         let GameNumber = randomNumber(number: 9)
-        imagesListArray.removeAll()
+        
         self.imagesListArray.append(UIImage(named: "spel\(GameNumber).jpg")!)
         
         self.ImageView.animationImages = imagesListArray
