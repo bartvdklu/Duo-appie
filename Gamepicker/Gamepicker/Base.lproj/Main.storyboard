@@ -220,6 +220,9 @@
                                         <integer key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cameraAction:" destination="GfE-AT-9IC" eventType="touchUpInside" id="MGs-dl-P44"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZZN-vj-aMW">
                                 <rect key="frame" x="75" y="505" width="266" height="67"/>
@@ -451,7 +454,7 @@
         <image name="verstoppertje" width="530" height="340"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ais-Nc-r11"/>
+        <segue reference="vTz-xj-Tdt"/>
         <segue reference="SHp-rB-hiN"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>

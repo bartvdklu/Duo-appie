@@ -9,18 +9,21 @@
 import UIKit
 import FirebaseDatabase
 
-class SpelViewController: UIViewController {
+class SpelViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var TxtBeschrijving: UITextView!
     @IBOutlet weak var TxtMaterialen: UITextView!
     @IBOutlet weak var TxtTijd: UITextView!
     @IBOutlet weak var lblSpel: UITextView!
     @IBOutlet weak var ImageView: UIImageView!
+    @IBOutlet weak var spelImage: UIImageView!
     
     var ref: DatabaseReference?
     var databaseHandle:DatabaseHandle?
     
     var previousNumber: Int? // used in randomNumber()
+    var imagesListArray = [UIImage]()
+
     
     func randomNumber(number: Int) -> Int {
         var randomNumber = Int(arc4random_uniform(UInt32(number)))
@@ -38,8 +41,6 @@ class SpelViewController: UIViewController {
         ref = Database.database().reference()
         
         let GameNumber = randomNumber(number: 9)
-        
-        var imagesListArray = [UIImage]()
         
 //        for imageName in 1...3
 //        {
@@ -79,4 +80,39 @@ class SpelViewController: UIViewController {
             
     }
 
+    @IBAction func cameraAction(_ sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            
+            imagePicker.allowsEditing = false
+            
+            imagePicker.sourceType = UIImagePickerController.SourceType.camera
+            self.present(imagePicker, animated: false, completion: nil)
+        }
+        else {let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            
+            imagePicker.allowsEditing = false
+            
+            imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+            self.present(imagePicker, animated: false, completion: nil)
+            
+        }
+        
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage {
+            imagesListArray.append(image)
+            self.ImageView.animationImages = imagesListArray
+            self.ImageView.animationDuration = 10
+            self.ImageView.startAnimating()
+
+        }else {
+            print("Error....")
+        }
+        self.dismiss(animated: false, completion: nil)
+    }
 }
