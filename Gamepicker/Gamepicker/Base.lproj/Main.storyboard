@@ -46,6 +46,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="rdmGame" destination="BYZ-38-t0r" eventType="touchUpInside" id="TYs-U3-LrT"/>
                                     <segue destination="GfE-AT-9IC" kind="show" id="vTz-xj-Tdt"/>
                                 </connections>
                             </button>
@@ -407,7 +408,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="GfE-AT-9IC" kind="show" id="Ais-Nc-r11"/>
+                                    <action selector="filterGames" destination="kEP-jH-RCk" eventType="touchUpInside" id="RWJ-Hq-ir2"/>
+                                    <segue destination="GfE-AT-9IC" kind="show" id="KfW-yW-8Kt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -441,6 +443,7 @@
                     </view>
                     <connections>
                         <outlet property="lblAantal" destination="OIG-hD-Ddw" id="fmX-gM-Yw8"/>
+                        <outlet property="slider" destination="jr4-zB-Z8w" id="a8p-me-oRa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mUU-P5-XVy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -454,7 +457,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="vTz-xj-Tdt"/>
-        <segue reference="SHp-rB-hiN"/>
+        <segue reference="dLB-Mx-WVr"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
 </document>

@@ -9,6 +9,8 @@
 import UIKit
 import FirebaseDatabase
 
+public var gamesRandom: [String] = []
+
 class SpelViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var TxtBeschrijving: UITextView!
@@ -23,35 +25,18 @@ class SpelViewController: UIViewController, UINavigationControllerDelegate, UIIm
     var previousNumber: Int? // used in randomNumber()
     var countGames: Int!
     var imagesListArray = [UIImage]()
-    
-
-    
-    func randomNumber(number: Int) -> Int {
-        var randomNumber = Int(arc4random_uniform(UInt32(number)))
-        while previousNumber == randomNumber {
-            randomNumber = Int(arc4random_uniform(UInt32(number)))
-        }
-        previousNumber = randomNumber
-        return randomNumber
-    }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(gamesRandom)
+        
         //set Firebase reference
         ref = Database.database().reference()
-//
-//        databaseHandle = ref?.child("Spellen").observe(.value, with: { (DataSnapshot) in
-//
-//            print(DataSnapshot.childrenCount)
-//            self.countGames = Int(DataSnapshot.childrenCount)
-//            
-//        })
-//        let gamesCount = countGames
-//        print(gamesCount)
-        let GameNumber = randomNumber(number: 9)
+
+        let GameNumber = gamesRandom.randomElement()
         
-        self.imagesListArray.append(UIImage(named: "spel\(GameNumber).jpg")!)
+        self.imagesListArray.append(UIImage(named: "spel\(GameNumber ?? "2").jpg")!)
         
         self.ImageView.animationImages = imagesListArray
         self.ImageView.animationDuration = 10
@@ -59,22 +44,22 @@ class SpelViewController: UIViewController, UINavigationControllerDelegate, UIIm
 
         
         //retrieve content for games and listen for changes
-        databaseHandle = ref?.child("Spellen").child(String(Int(GameNumber))).child("naam").observe(.value, with: { (DataSnapshot) in
+        databaseHandle = ref?.child("Spellen").child(GameNumber!).child("naam").observe(.value, with: { (DataSnapshot) in
             
             self.lblSpel.text = DataSnapshot.value as? String
         })
         
-        databaseHandle = ref?.child("Spellen").child(String(Int(GameNumber))).child("beschrijving").observe(.value, with: { (DataSnapshot) in
+        databaseHandle = ref?.child("Spellen").child(GameNumber!).child("beschrijving").observe(.value, with: { (DataSnapshot) in
             
             self.TxtBeschrijving.text = DataSnapshot.value as? String
         })
         
-        databaseHandle = ref?.child("Spellen").child(String(Int(GameNumber))).child("materialen").observe(.value, with: { (DataSnapshot) in
+        databaseHandle = ref?.child("Spellen").child(GameNumber!).child("materialen").observe(.value, with: { (DataSnapshot) in
             
             self.TxtMaterialen.text = DataSnapshot.value as? String
         })
         
-        databaseHandle = ref?.child("Spellen").child(String(Int(GameNumber))).child("tijd").observe(.value, with: { (DataSnapshot) in
+        databaseHandle = ref?.child("Spellen").child(GameNumber!).child("tijd").observe(.value, with: { (DataSnapshot) in
             
             self.TxtTijd.text = DataSnapshot.value as? String
         })
