@@ -26,7 +26,6 @@ class FilterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
@@ -37,7 +36,6 @@ class FilterViewController: UIViewController {
             for childSnapshot in snapshot.children{
                 let snap = childSnapshot as! DataSnapshot
                 let key = snap.key
-                gamesRandom.removeAll()
                 gamesRandom.append(key)
             }
             print(gamesRandom)

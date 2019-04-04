@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseDatabase
 
-public var gamesRandom: [String] = []
+public var gamesRandom: [String] = ["8"]
 
 class SpelViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
@@ -25,6 +25,11 @@ class SpelViewController: UIViewController, UINavigationControllerDelegate, UIIm
     var previousNumber: Int? // used in randomNumber()
     var countGames: Int!
     var imagesListArray = [UIImage]()
+    
+    @IBAction func RemoveArray(_ sender: UIBarButtonItem) {
+        gamesRandom.removeAll()
+        gamesRandom = ["8"]
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +70,7 @@ class SpelViewController: UIViewController, UINavigationControllerDelegate, UIIm
         })
             
     }
-
+    
     @IBAction func cameraAction(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(.camera){
             let imagePicker = UIImagePickerController()

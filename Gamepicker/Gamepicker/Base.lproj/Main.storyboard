@@ -125,6 +125,7 @@
                                         <barButtonItem key="leftBarButtonItem" systemItem="reply" id="P9f-QY-V1W">
                                             <color key="tintColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <connections>
+                                                <action selector="RemoveArray:" destination="GfE-AT-9IC" id="md5-rU-pNW"/>
                                                 <segue destination="BYZ-38-t0r" kind="show" id="SHp-rB-hiN"/>
                                             </connections>
                                         </barButtonItem>
@@ -456,8 +457,8 @@
         <image name="Spel_beginscherm" width="960" height="720"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vTz-xj-Tdt"/>
-        <segue reference="dLB-Mx-WVr"/>
+        <segue reference="KfW-yW-8Kt"/>
+        <segue reference="SHp-rB-hiN"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
 </document>
